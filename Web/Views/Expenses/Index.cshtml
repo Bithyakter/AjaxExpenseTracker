@@ -1,0 +1,50 @@
+﻿<style>
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid blue;
+        border-bottom: 16px solid blue;
+        width: 120px;
+        height: 120px;
+        position: fixed;
+        top: 50%;
+        left: calc(50% - 50px);
+        transform: translate(-50%, -50%);
+        z-index: 999999;
+        opacity: .5;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+</style>
+
+<section class="section">
+   <div class="row d-flex justify-content-center pt-2 mt-3">
+       <div class="col-lg-10">
+           <div class="card">
+               <div class="card-body">
+               <h5 class="card-title text-center">Expense List</h5>
+                   <!-- Default Table -->
+                   <a asp-action="Create" asp-controller="Expenses"  class="btn btn-primary mb-3">Add</a>
+                  <table class="table" id="tblData">
+                       <thead>
+                           <tr>
+                               @*<th scope="col">#</th>*@
+                               <th scope="col">Expenses Date</th>
+                               <th scope="col">Amount</th>
+                               <th scope="col">Category</th>
+                               <th>Action</th>
+                           </tr>
+                       </thead>
+                        <tbody id="table_body">
+
+                        </tbody>
+                  </table>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+<div class="loader" style="display:none;"></div>
+<script src="~/js/site.js"></script>
+<script src="~/js/expense.js"></script>

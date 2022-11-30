@@ -1,0 +1,90 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+        .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid blue;
+        border-bottom: 16px solid blue;
+        width: 120px;
+        height: 120px;
+        position: fixed;
+        top: 50%;
+        left: calc(50% - 50px);
+        transform: translate(-50%, -50%);
+        z-index: 999999;
+        opacity: .5;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+</style>
+
+<section class="section">
+   <div class="row d-flex justify-content-center pt-2 mt-3">
+       <div class="col-8">
+
+           <div class="card d-flex justify-content-center">
+               <div class="card-body">
+                   <h5 class="card-title text-center">Expense Category</h5>
+
+                       <button type="button" class="btn btn-primary mb-3" id="btn">
+                           Add
+                       </button>
+
+                   <!-- Default Table -->
+                   <table class="table" id="tblData">
+                       <thead>
+                           <tr>
+                               @*<th scope="col">#</th>*@
+                               <th scope="col">Category Name</th>
+                               <th scope="col">Action</th>
+                           </tr>
+                       </thead>
+                       <tbody id="table_body">
+                      
+                       </tbody>
+                   </table>
+                   <!-- End Default Table Example -->
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+<div class="loader" style="display:none;"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="goalmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Category</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" id="dismiss" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="CategoryForm" method="post">
+               <div class="modal-body">
+                   <div class="col-md-12">
+                       <div class="form-floating">
+                           <input type="hidden" value="0" id="OID" />
+                           <input type="text" class="form-control" id="categoryname" placeholder="Name" required>
+                           <label for="floatingName">Category Name</label>
+                               <p id="category_Text"></p>
+                       </div>
+                   </div>
+               </div>
+            
+               <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="dismiss">Close</button>
+                   <button type="button" class="btn btn-primary"  id="SubmitCategory">Save changes</button>
+               </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/site.js"></script>
+<script src="~/js/expensecategory.js"></script>

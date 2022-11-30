@@ -1,0 +1,41 @@
+﻿
+<div class="row d-flex justify-content-center pt-2 mt-3">
+    <div class="col-lg-8">
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title text-center">Update Expense</h5>
+                <form name="myForm" id="frmExpense">
+                    <div asp-validation-summary="ModelOnly" calss="text-danger"></div>
+                    <div class="row mb-4 me-2">
+                        <input type="hidden" id="OID" value="" />
+                        <label for="inputEmail3" class="col-sm-3 col-form-label">Expenses Date</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="ExpenseDate" required>
+                        </div>
+                    </div>
+                     <div class="row mb-4 me-2">
+                        <label for="inputPassword3" class="col-sm-3 col-form-label">Amount</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="ExpenseAmount" required>
+                        </div>
+                    </div>
+               <div class="row mb-3 me-2">
+                        <label for="inputPassword3" class="col-sm-3 col-form-label">Expense Category</label>
+                        <div class="col-sm-9">
+                            <select id="expenseCategory" class="form-control" required>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" id="SubmitExpenses" class="btn btn-primary">Submit</button>
+                        <a href="~/Expenses/Index"  class="btn btn-secondary">Back</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/js/site.js"></script>
+<script src="~/js/expense.js"></script>
