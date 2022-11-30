@@ -5,6 +5,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title text-center">Create Expense</h5>
+                
                 <form name="myForm" id="frmExpense">
                     <div asp-validation-summary="ModelOnly" calss="text-danger"></div>
                     <div class="row mb-4 me-2">
@@ -14,12 +15,14 @@
                             <span validation-for="ExpenseDate" id="ExpenseDate" class="text-danger"></span>
                         </div>
                     </div>
+
                     <div class="row mb-4 me-2">
                         <label for="inputPassword3" class="col-sm-3 col-form-label">Amount</label>
                         <div class="col-sm-9">
-                     <input type="text" class="form-control" id="ExpenseAmount" onkeypress="return Isnumeric(event)" required>
+                           <input type="text" class="form-control" id="ExpenseAmount" onkeypress="return Isnumeric(event)" required>
                         </div>
                     </div>
+
                     <div class="row mb-4 me-2">
                         <label for="inputPassword3"  class="col-sm-3 col-form-label">Expense Category</label>
                         <div class="col-sm-9">
