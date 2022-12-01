@@ -31,6 +31,7 @@ var submitForm = function (action) {
     //submit form
     $('#reportForm').submit();
 };
+
 $(document).ready(function () {
     CategoryDropDown();
     $(document)

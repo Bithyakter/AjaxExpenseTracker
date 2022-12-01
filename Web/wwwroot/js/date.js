@@ -11,6 +11,7 @@ $(function () {
         }
     }).datepicker('option', 'dateFormat', 'dd/mm/yy');
 });
+
 /*For To Date */
 $(function () {
     $("#Todate").attr("ReadOnly", true)

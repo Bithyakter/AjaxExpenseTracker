@@ -34,6 +34,6 @@ namespace Domain
         public int CategoryID { get; set; }
 
         [ForeignKey("CategoryID")]
-        public virtual Category Categories { get; set; }
+        public virtual Category? Categories { get; set; }
     }
 }

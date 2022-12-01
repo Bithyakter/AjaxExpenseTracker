@@ -6,7 +6,7 @@ using Utilities.Constants;
 namespace API.Controllers
 {
    /// <summary>
-   /// ExCategory controller.
+   /// Category controller.
    /// </summary>
    [Route(RouteConstants.BaseRoute)]
    [ApiController]
@@ -109,7 +109,7 @@ namespace API.Controllers
       /// URL: expenses-api/category/{key}
       /// </summary>
       /// <param name="key">Primary key of the table Districts.</param>
-      /// <param name="district">District to be updated.</param>
+      /// <param name="category">District to be updated.</param>
       /// <returns>Http Status Code: NoContent.</returns>
       [HttpPut]
       [Route(RouteConstants.UpdateCategory)]

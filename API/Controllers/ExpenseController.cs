@@ -37,8 +37,7 @@ namespace API.Controllers
       {
          try
          {
-
-            expense.DateModified = DateTime.Now;
+            expense.DateCreated = DateTime.Now;
             expense.IsDeleted = false;
             expense.IsSynced = false;
 
