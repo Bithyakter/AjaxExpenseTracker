@@ -1,0 +1,48 @@
+﻿
+<div class="row d-flex justify-content-center pt-2 mt-3">
+   <div class="col-lg-8">
+
+      <div class="card">
+         <div class="card-body">
+            <h5 class="card-title text-center">Report</h5>
+            <form action="/report/Export" id="reportForm" method="get">
+               <div asp-validation-summary="ModelOnly" calss="text-danger"></div>
+               
+               <div class="row mb-4 me-3">
+                  <label for="inputEmail3" class="col-sm-3 col-form-label">From Date</label>
+                  <div class="col-sm-9">
+                     <input type="text" required class="form-control" onfocus="(this.value='dd/mm/yyyy')" onblur="(this.value='')" name="FromDate" id="From1">
+                     <span class="text-danger" id="FromDateValdiation" style="display:none">required</span>
+                  </div>
+               </div>
+
+               <div class="row mb-4 me-3">
+                  <label for="inputPassword3" class="col-sm-3 col-form-label">To Date</label>
+                  <div class="col-sm-9">
+                     <input type="text" required class="form-control" onfocus="(this.value='dd/mm/yyyy')" onblur="(this.value='')" name="ToDate" id="Todate">
+                     <span class="text-danger" id="ToDateValdiation" style="display:none">required</span>
+                  </div>
+               </div>
+
+               <div class="row mb-4 me-3">
+                  <label for="inputPassword3" class="col-sm-3 col-form-label" name="Category">Expense Category</label>
+                  <div class="col-sm-9">
+                     <select id="expenseCategory" name="Category" class="form-control">
+                     </select>
+                  </div>
+               </div>
+
+               <div class="text-center">
+                  <button type="button" id="btnPDF" class="btn btn-primary mx-2">Print PDF</button>
+                  <button type="button" id="btnExcel" class="btn btn-primary mx-2">Export To Excel</button>
+                  <a type="reset" href="~/Expenses/Index" class="btn btn-secondary mx-2">Back</a>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+
+<script src="~/js/site.js"></script>
+<script src="~/js/Report.js"></script>
+<script src="~/js/date.js"></script>

@@ -22,6 +22,7 @@
         }
     })
 }
+
 var submitForm = function (action) {
     
     //set form action based on the method passed in the click handler, update/delete
